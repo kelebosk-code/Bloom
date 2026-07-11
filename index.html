@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f8eef4">
+<meta name="description" content="Bloom — a gentle companion for intentional living.">
+<title>Bloom</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+<header class="brand-header"><img class="brand-logo" src="logo.png" alt="Bloom"></header>
+<main>
+<section class="page active" data-page="today">
+<article class="card"><p class="eyebrow">Today</p><h1>Welcome.</h1><p class="prompt">What best describes today?</p>
+<div class="choice-grid" data-choice-group="feeling">
+<button type="button">Peaceful</button><button type="button">Calm</button><button type="button">Hopeful</button><button type="button">Growing</button><button type="button">Grateful</button><button type="button">Restful</button><button type="button">Challenging</button><button type="button">Energised</button>
+</div></article>
+<article class="card"><h2>What needs your care today?</h2>
+<div class="choice-grid" data-choice-group="care">
+<button type="button">My Body</button><button type="button">My Heart</button><button type="button">My Spirit</button><button type="button">My Relationships</button><button type="button">My Purpose</button>
+</div></article>
+<article class="card accent-card"><p class="eyebrow">Today's gentle step</p><h2 id="gentle-step">Take one kind step.</h2><p class="soft-copy">Enough for today.</p></article>
+</section>
+
+<section class="page" data-page="garden">
+<article class="card garden-card"><p class="eyebrow">Garden</p><h1>Your care is taking root.</h1>
+<div class="garden-scene" aria-hidden="true"><img src="flower.png" class="garden-flower" alt=""><img src="butterfly.png" class="garden-butterfly" alt=""></div>
+<p class="soft-copy" id="garden-message">Every garden begins with a moment of care.</p></article>
+</section>
+
+<section class="page" data-page="reflections">
+<article class="card"><p class="eyebrow">Reflections</p><h1>A quiet moment</h1>
+<label class="field-label" for="journal-entry">Write</label>
+<textarea id="journal-entry" rows="6" placeholder="What would you like to remember?"></textarea>
+<button class="primary-button" id="save-journal" type="button">Save reflection</button>
+<p class="status" id="journal-status" aria-live="polite"></p>
+<div class="divider"></div>
+<h2>Quiet Joys</h2><p class="prompt">What delighted you today?</p>
+<textarea id="delight-entry" rows="3" placeholder="A delight worth keeping..."></textarea>
+<button class="primary-button" id="save-delight" type="button">Save delight</button>
+<div id="delight-list" class="saved-list"></div>
+</article>
+</section>
+
+<section class="page" data-page="settings">
+<article class="card"><p class="eyebrow">Settings</p><h1>Make Bloom yours</h1>
+<label class="setting-row" for="evening-toggle"><span><strong>Evening mode</strong><small>A softer theme for later hours.</small></span><input type="checkbox" id="evening-toggle"></label>
+<div class="divider"></div><h2>Privacy</h2><p class="soft-copy">Your entries remain on this device.</p>
+<div class="divider"></div><h2>About Bloom</h2><p class="soft-copy">A gentle companion for intentional living.</p>
+</article>
+</section>
+</main>
+<nav class="bottom-nav" aria-label="Primary navigation">
+<button class="nav-button active" data-target="today" type="button">Today</button>
+<button class="nav-button" data-target="garden" type="button">Garden</button>
+<button class="nav-button" data-target="reflections" type="button">Reflections</button>
+<button class="nav-button" data-target="settings" type="button">Settings</button>
+</nav>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
